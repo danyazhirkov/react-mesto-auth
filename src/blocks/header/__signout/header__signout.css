@@ -1,0 +1,13 @@
+.header__signout {
+	color: #A9A9A9;
+	margin-left: 24px;
+	cursor: pointer;
+	transition: all .35s ease;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+.header__signout:hover {
+	opacity: .6
+}
