@@ -1,4 +1,3 @@
-import "../index.css";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import Main from "./Main.js";
@@ -130,7 +129,7 @@ function App() {
         api.getInitialCards()
             .then((cards) => setCards(cards))
             .catch(() => console.error(`Получение карточек, App`));
-    }, []);
+    }, [isLoggedIn]);
 
     const handleLogin = (userData) => {
         const { email, password } = userData;

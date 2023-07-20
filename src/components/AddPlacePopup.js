@@ -1,7 +1,7 @@
 import PopupWithForm from "./PopupWithForm";
 import { useState, useEffect } from "react";
 
-function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading}) {
+function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
     const [name, setName] = useState("");
     const [link, setLink] = useState("");
 
@@ -33,7 +33,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading}) {
             isOpen={isOpen}
             onClose={onClose}
             onSubmit={handleSubmit}
-            buttonText={isLoading? 'Сохранение...' : 'Сохранить'}
+            buttonText={isLoading ? "Сохранение..." : "Сохранить"}
         >
             <input
                 type="text"
@@ -43,7 +43,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading}) {
                 placeholder="Название"
                 minLength={2}
                 maxLength={30}
-                required=""
+                required
                 onChange={handleChangeName}
                 value={name || ""}
             />
@@ -54,7 +54,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading}) {
                 className="form__item form__item_input-description form__item_input-description_second"
                 name="link"
                 placeholder="Ссылка на картинку"
-                required=""
+                required
                 onChange={handleChangeLink}
                 value={link || ""}
             />
