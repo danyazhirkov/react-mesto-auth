@@ -256,7 +256,7 @@ function App() {
                                     onAddPlace={handleAddCardClick}
                                     onCardClick={handleCardClick}
                                     onCardLike={handleCardLike}
-                                    onCardDelete={handleDeleteCard}
+                                    onCardDelete={handleConfirmDeleteClick}
                                     cards={cards}
                                     isLoading={isLoading}
                                 />
@@ -274,15 +274,6 @@ function App() {
                         />
                     </Routes>
                 </div>
-                <Main
-                    cards={cards}
-                    onCardLike={handleCardLike}
-                    onEditProfile={handleEditProfileClick}
-                    onAddPlace={handleAddCardClick}
-                    onEditAvatar={handleEditAvatarClick}
-                    onCardClick={handleCardClick}
-                    onCardDelete={handleConfirmDeleteClick}
-                />
                 <Footer />
                 <EditAvatarPopup
                     isOpen={isEditAvatarPopupOpen}
