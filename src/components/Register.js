@@ -41,7 +41,7 @@ function Register({ handleRegister }) {
                     placeholder="Email"
                     minLength={5}
                     maxLength={40}
-                    required=""
+                    required
                 />
 
                 <input
@@ -54,7 +54,7 @@ function Register({ handleRegister }) {
                     placeholder="Пароль"
                     minLength={5}
                     maxLength={30}
-                    required=""
+                    required
                 />
             </AuthForm>
 

@@ -31,7 +31,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar, isLoading }) {
                 className="form__item form__item_input-avatar"
                 name="avatar"
                 placeholder="Ссылка на аватар"
-                required=""
+                required
                 ref={avatarRef}
             />
             <span className="form__item-error" />
