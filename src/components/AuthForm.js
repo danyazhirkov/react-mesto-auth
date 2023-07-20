@@ -3,7 +3,7 @@ function AuthForm({ title, name, onSubmit, buttonText, ...props }) {
 	return (
 		<div className="auth__container">
 
-			<h1 className="auth__tittle">{title}</h1>
+			<h1 className="auth__title">{title}</h1>
 
 			<form
 				className={`auth__form auth__form_${name}`}
