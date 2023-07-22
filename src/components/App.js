@@ -123,9 +123,7 @@ function App() {
         if (isLoggedIn) {
             api.getUserData()
                 .then((userData) => setCurrentUser(userData))
-                .catch(() =>
-                    console.error(`Получение данных пользователя, App`)
-                );
+                .catch(() => console.error(`Получение данных пользователя, App`));
         }
     }, [isLoggedIn]);
 
