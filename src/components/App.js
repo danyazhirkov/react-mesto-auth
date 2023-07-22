@@ -120,15 +120,21 @@ function App() {
     };
 
     useEffect(() => {
-        api.getUserData()
-            .then((userData) => setCurrentUser(userData))
-            .catch(() => console.error(`Получение данных пользователя, App`));
-    }, []);
+        if (isLoggedIn) {
+            api.getUserData()
+                .then((userData) => setCurrentUser(userData))
+                .catch(() =>
+                    console.error(`Получение данных пользователя, App`)
+                );
+        }
+    }, [isLoggedIn]);
 
     useEffect(() => {
-        api.getInitialCards()
-            .then((cards) => setCards(cards))
-            .catch(() => console.error(`Получение карточек, App`));
+        if (isLoggedIn) {
+            api.getInitialCards()
+                .then((cards) => setCards(cards))
+                .catch(() => console.error(`Получение карточек, App`));
+        }
     }, [isLoggedIn]);
 
     const handleLogin = (userData) => {
